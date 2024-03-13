@@ -25,8 +25,8 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('SEARC
 pd_df=my_dataframe.to_pandas()
 st.dataframe(pd_df)
 st.stop()
-
-ingredients_list = st.multiselect(
+# multiselect
+ingredients_list = st.text_input(
 'Choose up to 5 ingredients:'
 , my_dataframe
 , max_selections = 6
